@@ -1,0 +1,83 @@
+$colorBlue: #2D89E6;
+$colorWhite: #FFFFFF;
+$colorGray: #C3C3C3;
+$fontSego: Segoe UI;
+
+* {
+box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.root {
+ width: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 76px;
+    background-color: $colorBlue;
+}
+
+.header b {
+    margin: 0px;
+    text-align: center;
+    color: $colorWhite;   
+    font-size: 22px;
+    display: flex;
+    justify-content: center;  
+    padding-top: 20px;
+}
+
+.left-content {
+    margin: 30px 0px 0px 80px;;
+    width: 20%;
+    border: 1px solid $colorGray;
+    border-radius: 25px;
+}
+
+.memberHeader b {
+    color: #707070;
+    display: flex;
+    font-size: 17px;
+    justify-content: center;
+    margin: 20px;
+    font-family: $fontSego; 
+}
+.memberInfo p {
+    margin: 25px;
+    color: $colorGray;
+    border: 1px solid $colorGray;
+    border-radius: 13px;
+    padding: 15px;
+    font-family: $fontSego; 
+    font-size: 14px;
+}
+.biography p {
+   height:  230px;
+}
+
+.inputs {
+    font-size: 13px;
+    input {
+        margin-left: 25px;
+        margin-bottom: 50px;
+        border: 1px solid $colorGray;
+    }
+}
+
+.saveButton button {
+    width: 100%;
+    height: 60px;
+    background-color: $colorBlue;
+    color: $colorWhite;
+    font-size: 17px;
+    border: none;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+}
