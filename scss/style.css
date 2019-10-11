@@ -113,7 +113,7 @@ html, body {
   border-bottom-left-radius: 25px;
 }
 
-.content .right-content {
+.content .rightContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,7 +127,7 @@ html, body {
   overflow: auto;
 }
 
-.content .right-content .right-content-header {
+.content .rightContent .rightContentHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,7 +141,7 @@ html, body {
           justify-content: space-between;
 }
 
-.content .right-content .right-content-header .search {
+.content .rightContent .rightContentHeader .search {
   background: #2D89E6;
   width: 70%;
   display: -webkit-box;
@@ -153,20 +153,20 @@ html, body {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border-bottom-right-radius: 13px;
-  border-top-right-radius: 13px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.content .right-content .right-content-header .search p {
+.content .rightContent .rightContentHeader .search p {
   font-size: 13px;
   font-family: Segoe UI;
   color: #FFFFFF;
 }
 
-.content .right-content .right-content-header .search select, .content .right-content .right-content-header .search input {
+.content .rightContent .rightContentHeader .search select, .content .rightContent .rightContentHeader .search input {
   font-size: 10px;
   font-family: Segoe UI;
   color: #8B8B8B;
@@ -174,29 +174,29 @@ html, body {
   border: none;
 }
 
-.content .right-content .right-content-header .search .sort {
+.content .rightContent .rightContentHeader .search .sort {
   width: 50px;
   height: 20px;
 }
 
-.content .right-content .right-content-header .search .filter {
+.content .rightContent .rightContentHeader .search .filter {
   padding: 5px 10px;
   border-right: 1px solid #FFFFFF;
   border-left: 1px solid #FFFFFF;
 }
 
-.content .right-content .right-content-header .search .filter select {
+.content .rightContent .rightContentHeader .search .filter select {
   width: 81px;
   height: 20px;
 }
 
-.content .right-content .right-content-header .search #search {
+.content .rightContent .rightContentHeader .search #search {
   width: 186px;
   height: 21px;
   border-radius: 4px;
 }
 
-.content .right-content .right-content-header .noOfItems {
+.content .rightContent .rightContentHeader .noOfItems {
   background-color: #2D89E6;
   border-bottom-left-radius: 22px;
   border-top-left-radius: 22px;
@@ -204,9 +204,46 @@ html, body {
   padding-left: 15px;
 }
 
-.content .right-content .right-content-header .noOfItems p {
+.content .rightContent .rightContentHeader .noOfItems p {
   font-size: 13px;
   font-family: Segoe UI;
   color: #FFFFFF;
+}
+
+.content .rightContent .rightContentCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 130px;
+  overflow: hidden;
+}
+
+.content .rightContent .rightContentCards .deleteIcon img {
+  padding-top: 44px;
+  width: 38px;
+}
+
+.content .rightContent .rightContentCards .cardContent {
+  padding: 10px;
+  font-family: Segoe UI;
+}
+
+.content .rightContent .rightContentCards .cardContent #memberName {
+  font-size: 22px;
+}
+
+.content .rightContent .rightContentCards .cardContent #details {
+  font-size: 14px;
+  color: #2D89E6;
+}
+
+.content .rightContent .rightContentCards .cardContent p {
+  color: #6A6A6A;
+  font-size: 14px;
+  margin: 5px;
 }
 /*# sourceMappingURL=style.css.map */

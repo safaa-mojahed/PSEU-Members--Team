@@ -99,7 +99,7 @@ html, body {
         }
     }
 
-    .right-content {
+    .rightContent {
         display: flex;
         flex-direction: column;
         margin-left: 15px;
@@ -107,7 +107,7 @@ html, body {
         width: 60%;
         overflow: auto;
 
-        .right-content-header {
+        .rightContentHeader {
             display: flex;
             flex-direction: row;
             margin: 50px 0px 50px 0px;
@@ -119,8 +119,8 @@ html, body {
                 display: flex;
                 flex-direction: row;
                 justify-content:space-around;
-                border-bottom-right-radius: 13px;
-                border-top-right-radius: 13px;  
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;  
                 align-items: center;
 
                 p {
@@ -173,6 +173,37 @@ html, body {
                 }
             }
         }
-       
+        
+        .rightContentCards {
+            display: flex;
+            flex-direction: row;
+            height: 130px;
+            overflow: hidden;
+
+            .deleteIcon img {
+               padding-top: 44px;
+                width: 38px;
+            }
+            
+            .cardContent {
+                padding: 10px;
+                font-family: $fontSego;
+
+                #memberName {
+                    font-size: 22px;  
+                }
+
+                #details {
+                    font-size: 14px;
+                    color: $colorBlue;
+                }
+
+                p {
+                    color: #6A6A6A;
+                    font-size: 14px;
+                    margin: 5px;
+                }
+            }
+        }
     }
 }
