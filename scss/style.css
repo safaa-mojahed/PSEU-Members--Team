@@ -33,11 +33,49 @@ html, body {
   padding-top: 20px;
 }
 
-.left-content {
+.content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .left-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 30px 0px 0px 80px;
-  width: 20%;
   border: 1px solid #C3C3C3;
   border-radius: 25px;
+  width: 350px;
+}
+
+.content .right-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 15px;
+  background: violet;
+  width: 60%;
+  overflow: auto;
+}
+
+.content .right-content .right-content-header {
+  width: 100%;
+  height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .memberHeader b {
@@ -54,7 +92,7 @@ html, body {
 }
 
 .memberInfo p {
-  margin: 25px;
+  margin: 5px 10px 5px 10px;
   color: #C3C3C3;
   border: 1px solid #C3C3C3;
   border-radius: 13px;
@@ -64,7 +102,7 @@ html, body {
 }
 
 .biography p {
-  height: 230px;
+  height: 200px;
 }
 
 .inputs {
