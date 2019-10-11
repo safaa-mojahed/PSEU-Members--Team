@@ -71,7 +71,7 @@ html, body {
     font-family: $fontSego; 
 }
 
-.memberInfo p, .select {
+.memberInfo p, .select, #biography {
     margin: 5px 10px 5px 10px;
     color: $colorGray;
     border: 1px solid $colorGray;
@@ -85,13 +85,12 @@ html, body {
     height: 49px;
     background-color: #FFFFFF;
     -webkit-appearance: none;
-
+    -moz-appearance: none; 
+    appearance: none;
+    background-image: url("../images/arrow.png");
 }
 
 #biography {
-    margin-left: 12px;
-    border: 1px solid $colorGray;
-    border-radius: 13px;
     resize: none;
 }
 
