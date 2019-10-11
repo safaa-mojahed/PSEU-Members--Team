@@ -91,7 +91,7 @@ html, body {
   font-family: Segoe UI;
 }
 
-.memberInfo p {
+.memberInfo p, .select {
   margin: 5px 10px 5px 10px;
   color: #C3C3C3;
   border: 1px solid #C3C3C3;
@@ -99,6 +99,13 @@ html, body {
   padding: 15px;
   font-family: Segoe UI;
   font-size: 14px;
+}
+
+.select {
+  width: 325px;
+  height: 49px;
+  background-color: #FFFFFF;
+  -webkit-appearance: none;
 }
 
 #biography {

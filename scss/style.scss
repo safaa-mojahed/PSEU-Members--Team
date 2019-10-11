@@ -62,7 +62,6 @@ html, body {
     }
 }
 
-
 .memberHeader b {
     color: #707070;
     display: flex;
@@ -71,7 +70,8 @@ html, body {
     margin: 20px;
     font-family: $fontSego; 
 }
-.memberInfo p {
+
+.memberInfo p, .select {
     margin: 5px 10px 5px 10px;
     color: $colorGray;
     border: 1px solid $colorGray;
@@ -80,6 +80,14 @@ html, body {
     font-family: $fontSego; 
     font-size: 14px;
 }
+.select {
+    width: 325px;
+    height: 49px;
+    background-color: #FFFFFF;
+    -webkit-appearance: none;
+
+}
+
 #biography {
     margin-left: 12px;
     border: 1px solid $colorGray;
