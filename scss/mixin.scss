@@ -1,0 +1,24 @@
+$colorBlue: #2D89E6;
+$colorWhite: #FFFFFF;
+$colorGray: #C3C3C3;
+$fontSego: Segoe UI;
+
+@mixin flexDisplay($display, $flex-direction) {
+    display: $display;
+    flex-direction: $flex-direction;
+}
+
+@mixin flexDisplayContent($display, $justify-content) {
+    display: $display;
+    justify-content: $justify-content;
+}
+
+@mixin textStyle($font-size, $font-family, $color) {
+    font-size: $font-size;
+    font-family: $font-family;
+    color: $color;
+}
+@mixin position($width, $height) {
+    width: $width;
+    height: $height;
+}
