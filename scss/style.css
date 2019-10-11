@@ -59,7 +59,7 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   margin-left: 15px;
-  background: violet;
+  background: #F6F6F6;
   width: 60%;
   overflow: auto;
 }
@@ -101,8 +101,11 @@ html, body {
   font-size: 14px;
 }
 
-.biography p {
-  height: 200px;
+#biography {
+  margin-left: 12px;
+  border: 1px solid #C3C3C3;
+  border-radius: 13px;
+  resize: none;
 }
 
 .inputs {

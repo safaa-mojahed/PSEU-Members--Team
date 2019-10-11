@@ -46,7 +46,7 @@ html, body {
     .right-content {
         display: flex;
         margin-left: 15px;
-        background: violet;
+        background: #F6F6F6;
         width: 60%;
         overflow: auto;
         .right-content-header {
@@ -80,8 +80,11 @@ html, body {
     font-family: $fontSego; 
     font-size: 14px;
 }
-.biography p {
-   height:  200px;
+#biography {
+    margin-left: 12px;
+    border: 1px solid $colorGray;
+    border-radius: 13px;
+    resize: none;
 }
 
 .inputs {
