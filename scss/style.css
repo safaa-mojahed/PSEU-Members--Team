@@ -58,6 +58,10 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: 15px;
   background: #F6F6F6;
   width: 60%;
@@ -65,17 +69,86 @@ html, body {
 }
 
 .content .right-content .right-content-header {
-  width: 100%;
-  height: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 50px 0px 50px 0px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .right-content .right-content-header .search {
+  background: #2D89E6;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  border-bottom-right-radius: 13px;
+  border-top-right-radius: 13px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .right-content .right-content-header .search p {
+  font-size: 13px;
+  font-family: Segoe UI;
+  color: #FFFFFF;
+}
+
+.content .right-content .right-content-header .search select, .content .right-content .right-content-header .search input {
+  font-size: 10px;
+  font-family: Segoe UI;
+  color: #8B8B8B;
+  border-radius: 9px;
+  border: none;
+}
+
+.content .right-content .right-content-header .search .sort {
+  width: 50px;
+  height: 20px;
+}
+
+.content .right-content .right-content-header .search .filter {
+  padding: 5px 10px;
+  border-right: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+}
+
+.content .right-content .right-content-header .search .filter select {
+  width: 81px;
+  height: 20px;
+}
+
+.content .right-content .right-content-header .search #search {
+  width: 186px;
+  height: 21px;
+  border-radius: 4px;
+}
+
+.content .right-content .right-content-header .noOfItems {
+  background-color: #2D89E6;
+  border-bottom-left-radius: 22px;
+  border-top-left-radius: 22px;
+  width: 89px;
+  padding-left: 15px;
+}
+
+.content .right-content .right-content-header .noOfItems p {
+  font-size: 13px;
+  font-family: Segoe UI;
+  color: #FFFFFF;
 }
 
 .memberHeader b {

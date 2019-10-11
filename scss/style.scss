@@ -35,6 +35,7 @@ html, body {
 .content {
     width: 100%;
     display: flex;
+
     .left-content {
         display: flex;
         flex-direction: column;
@@ -43,22 +44,82 @@ html, body {
         border-radius: 25px;
         width: 350px;
     }
+
     .right-content {
         display: flex;
+        flex-direction: column;
         margin-left: 15px;
         background: #F6F6F6;
         width: 60%;
         overflow: auto;
-        .right-content-header {
-            width: 100%;
-            height: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-        .right-content-cards {
 
+        .right-content-header {
+            display: flex;
+            flex-direction: row;
+            margin: 50px 0px 50px 0px;
+            justify-content: space-between;
+
+            .search {
+                background: $colorBlue;
+                width: 70%;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-around;
+                border-bottom-right-radius: 13px;
+                border-top-right-radius: 13px;  
+                align-items: center;
+
+                p {
+                    font-size: 13px;
+                    font-family: $fontSego;
+                    color: $colorWhite;
+                }
+
+                select, input {
+                    font-size: 10px;
+                    font-family: $fontSego;
+                    color: #8B8B8B;
+                    border-radius: 9px;
+                    border: none;
+                }
+                
+                .sort {
+                    width: 50px;
+                    height: 20px;
+                }
+
+                .filter {
+                    padding: 5px 10px;
+                    border-right: 1px solid $colorWhite;
+                    border-left: 1px solid $colorWhite;
+
+                    select{
+                        width: 81px;
+                        height: 20px;
+                    }
+                }
+                
+                #search {
+                    width: 186px;
+                    height: 21px;
+                    border-radius: 4px;
+                }
+            }
+            .noOfItems {
+                background-color: $colorBlue;
+                border-bottom-left-radius: 22px;
+                border-top-left-radius: 22px;
+                width: 89px;
+                padding-left: 15px;
+
+                p {
+                    font-size: 13px;
+                    font-family: $fontSego;
+                    color: $colorWhite;
+                }
+            }
         }
+       
     }
 }
 
