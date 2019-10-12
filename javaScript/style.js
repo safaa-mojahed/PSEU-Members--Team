@@ -16,11 +16,34 @@ save.addEventListener("click", function(e) {
     let memberRole = document.getElementById("role").value;
     let memberBiography = document.getElementById("biography").value;
     let member = new createMember(memeberName, memberEmail, memberMajor, memberRole, memberBiography);
-    members.push(member);
-    localStorage.setItem('teamMembers', JSON.stringify(members));
-    let allMembers = new Array();
-    allMembers = localStorage.getItem('teamMembers') ?
-    JSON.parse(localStorage.getItem('teamMembers')) : []
+    let valid = required(memeberName, memberEmail, memberMajor, memberRole, memberBiography);
+    let unique = emailIsUnique(memberEmail);
+
+    if(valid && unique) {
+        members.push(member);
+        localStorage.setItem('teamMembers', JSON.stringify(members));
+        let allMembers = new Array();
+        allMembers = localStorage.getItem('teamMembers') ?
+        JSON.parse(localStorage.getItem('teamMembers')) : []
+    } 
 });
 
+function required(name, email, major, role, biography) 
+{
+  if (name.length === 0 || email.length === 0 || major.length === 0 ||
+    role.length === 0 || biography.length === 0)
+   { 
+      alert("please complete the form all the fields are required.");  	
+      return false; 
+   }  	
+   return true; 
+} 
 
+function emailIsUnique (enteredEmail){
+    let validEmail = members.find( member => member.email === enteredEmail);
+    if(validEmail !== undefined) {
+        alert("the email account must be unique.")
+        return false;
+    }
+    return true;
+ }
