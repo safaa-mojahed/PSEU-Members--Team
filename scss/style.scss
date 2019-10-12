@@ -46,7 +46,6 @@ html, body {
         @include flexDisplayContent(flex, center);
         @include textStyle(22px, $fontSego, $colorWhite);
         margin: 0px;
-        text-align: center;
         padding-top: 20px;
     }
 }
