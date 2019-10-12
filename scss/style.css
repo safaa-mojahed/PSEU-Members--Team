@@ -19,6 +19,10 @@ html, body {
   background-color: #2D89E6;
 }
 
+.header h1 {
+  margin: 0px;
+}
+
 .header b {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -4,7 +4,7 @@ $colorWhite: #FFFFFF;
 $colorGray: #C3C3C3;
 $fontSego: Segoe UI;
 
-@mixin flexDisplay($display, $flex-direction) {
+@mixin flexDisplay($display, $flex-direction) { 
     display: $display;
     flex-direction: $flex-direction;
 }
@@ -41,6 +41,10 @@ html, body {
 .header {
     @include position(100%, 76px);
     background-color: $colorBlue;
+
+    h1 {
+        margin: 0px;
+    }
 
     b {
         @include flexDisplayContent(flex, center);
