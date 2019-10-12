@@ -68,10 +68,10 @@ html, body {
   margin: 20px;
 }
 
-.content .left-content .memberInfo p, .content .left-content .select, .content .left-content #biography {
+.content .left-content .memberInfo input, .content .left-content select, .content .left-content #biography {
   font-size: 14px;
   font-family: Segoe UI;
-  color: #C3C3C3;
+  color: #AEAEAE;
   margin: 5px 10px 5px 10px;
   border: 1px solid #C3C3C3;
   border-radius: 13px;
@@ -86,6 +86,10 @@ html, body {
   -moz-appearance: none;
   appearance: none;
   background-image: url("../images/arrow.png");
+}
+
+.content .left-content #name, .content .left-content #email {
+  width: 324px;
 }
 
 .content .left-content #biography {

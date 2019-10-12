@@ -68,8 +68,8 @@ html, body {
             margin: 20px;
         }
         
-        .memberInfo p, .select, #biography {
-            @include textStyle(14px, $fontSego, $colorGray);
+        .memberInfo input, select, #biography {
+            @include textStyle(14px, $fontSego, #AEAEAE);
             margin: 5px 10px 5px 10px;
             border: 1px solid $colorGray;
             border-radius: 13px;
@@ -83,6 +83,10 @@ html, body {
             -moz-appearance: none; 
             appearance: none;
             background-image: url("../images/arrow.png");
+        }
+
+        #name, #email {
+            width: 324px;
         }
         
         #biography {

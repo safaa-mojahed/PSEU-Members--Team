@@ -20,13 +20,13 @@
                     <b>Add new member</b>
                 </div>
                 <div class="memberInfo">
-                    <p>Name</p>
+                    <input id="name" type="text" placeholder="name">
                 </div>
                 <div class="memberInfo">
-                    <p>Email</p>
+                    <input id="email" type="email" placeholder="Email">
                 </div>
                 <div class="memberInfo">
-                    <select class="select">
+                    <select class="select" id="major">
                         <option value="major" selected disabled value=" ">Major</option>
                         <option value="computerScience" >Computer Science</option>
                         <option value="computerEngineering">Computer Engineering</option>
@@ -35,7 +35,7 @@
                     </select>
                 </div>
                 <div class="memberInfo">
-                    <select class="select">
+                    <select class="select" id="role">
                         <option value="role" selected disabled value=" ">Role</option>
                         <option value="frontEndDeveloper">Front-End Developer</option>
                         <option value="backEndDeveloper">Back-End Developer</option>
@@ -44,7 +44,7 @@
                     </select>
                     </div>
                 <div class="memberInfo">
-                    <textarea id="biography" cols="40" rows="10" maxlength="1500" minlength="500">Biography</textarea>
+                    <textarea id="biography" cols="40" rows="10" maxlength="1500" minlength="500" placeholder="Biography"></textarea>
                 </div>
                 <form class="inputs">
                     <input type="checkbox"> Add to bottom / or to index
@@ -80,7 +80,7 @@
                                 <option value="designer">UI/UX Designer</option>
                             </select>
                         </div>
-                        <input id="search" type="text" value="search by value...">
+                        <input id="search" type="search" placeholder="search by value...">
                     </div>
                     <div class="noOfItems">
                         <p>15 ITEMS</p>
@@ -112,5 +112,6 @@
             </div>
         </div>
     </div>
+    <script src="javaScript/style.js"></script>
 </body>
 </html>
