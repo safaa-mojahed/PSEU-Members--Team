@@ -76,7 +76,7 @@ html, body {
 .content .left-content .memberInfo input, .content .left-content select, .content .left-content #biography {
   font-size: 14px;
   font-family: Segoe UI;
-  color: #AEAEAE;
+  color: #AEAEAE !important;
   margin: 5px 10px 5px 10px;
   border: 1px solid #C3C3C3;
   border-radius: 13px;
@@ -132,7 +132,7 @@ html, body {
   margin-left: 15px;
   background: #F6F6F6;
   width: 70%;
-  height: 900px;
+  height: 800px;
 }
 
 .content .rightContent .rightContentHeader {
