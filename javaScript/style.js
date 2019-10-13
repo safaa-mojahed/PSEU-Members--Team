@@ -2,9 +2,14 @@ let save = document.getElementById('save');
 members = localStorage.getItem('teamMembers') ?
 JSON.parse(localStorage.getItem('teamMembers')) : []
 
-members.forEach(element => {
-    document.getElementById("card").innerHTML += displayCard(element.name, element.email, element.major, element.role, element.biograghy);
-});
+function displayItems() {
+    document.getElementById("card").innerHTML = "";
+    members.forEach(element => {
+    document.getElementById("card").innerHTML += displayCard(element.name, element.email, element.major, element.role, element.biography);
+    });
+}
+
+displayItems();
 
 function createMember(name, email, major, role, biography) 
 {
@@ -26,22 +31,24 @@ save.addEventListener("click", function(e) {
     let member = new createMember(memeberName, memberEmail, memberMajor, memberRole, memberBiography);
     let valid = required(memeberName, memberEmail, memberMajor, memberRole, memberBiography);
     let unique = emailIsUnique(memberEmail);
-    if(valid && unique && !addBottom && index == "") 
-    {
-        members.push(member);
-        localStorage.setItem('teamMembers', JSON.stringify(members));
-    }
-    else 
-        if(index == "")
-        {
-            members.unshift(member);
+    if(valid && unique && !addBottom && index == "") {
+            members.push(member);
             localStorage.setItem('teamMembers', JSON.stringify(members));
+            displayItems();
+
         }
-    else {
-            members.splice(index, 0, member);
-            localStorage.setItem('teamMembers', JSON.stringify(members));
-    }
-    document.getElementById("card").innerHTML += displayCard(memeberName, memberEmail, memberMajor, memberRole, memberBiography);
+    else 
+        if(valid && unique && index == "") {
+                members.unshift(member);
+                localStorage.setItem('teamMembers', JSON.stringify(members));
+                displayItems();
+            }
+    else 
+        if(valid && unique && !addBottom ) {
+                members.splice(index, 0, member);
+                localStorage.setItem('teamMembers', JSON.stringify(members));
+                displayItems();
+            }
     console.log(members);
 });
 
@@ -65,7 +72,7 @@ function emailIsUnique (enteredEmail){
     return true;
  }
 
- function displayCard(name, email, major, role, biograghy ) {
+ function displayCard(name, email, major, role, biography ) {
     return ` <div class="rightContentCards">
         <div class="deleteIcon">
             <img src="images/delete-icon.png" alt="delete">

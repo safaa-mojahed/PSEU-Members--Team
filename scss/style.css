@@ -7,7 +7,6 @@ html, body {
   margin: 0px;
   padding: 0px;
   width: 100%;
-  overflow: hidden;
 }
 
 .root {
@@ -221,7 +220,7 @@ html, body {
 
 .content .rightContent #card {
   overflow: scroll;
-  height: 750px;
+  height: 400px;
 }
 
 .content .rightContent #card .rightContentCards {
@@ -234,6 +233,7 @@ html, body {
           flex-direction: row;
   height: 130px;
   margin: 20px;
+  overflow: hidden;
 }
 
 .content .rightContent #card .rightContentCards .deleteIcon img {

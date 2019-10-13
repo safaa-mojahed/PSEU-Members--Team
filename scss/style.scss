@@ -32,7 +32,7 @@ html, body {
     margin: 0px;
     padding: 0px;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .root {
@@ -184,12 +184,14 @@ html, body {
         }
         #card {
             overflow: scroll;
-            height: 750px;
+           // height: 130px;
+           height: 400px;;
 
             .rightContentCards {
                 @include flexDisplay(flex, row);
                 height: 130px;
                 margin: 20px;
+                overflow: hidden;
                 
                 .deleteIcon img {
                    padding-top: 44px;
