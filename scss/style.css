@@ -85,9 +85,6 @@ html, body {
   width: 325px;
   height: 49px;
   background-color: #FFFFFF;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   background-image: url("../images/arrow.png");
 }
 
@@ -132,7 +129,7 @@ html, body {
           flex-direction: column;
   margin-left: 15px;
   background: #F6F6F6;
-  width: 60%;
+  width: 70%;
   overflow: auto;
 }
 
@@ -160,10 +157,8 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -173,6 +168,7 @@ html, body {
   font-size: 13px;
   font-family: Segoe UI;
   color: #FFFFFF;
+  margin-left: 30px;
 }
 
 .content .rightContent .rightContentHeader .search select, .content .rightContent .rightContentHeader .search input {
@@ -186,6 +182,7 @@ html, body {
 .content .rightContent .rightContentHeader .search .sort {
   width: 50px;
   height: 20px;
+  margin: 10px;
 }
 
 .content .rightContent .rightContentHeader .search .filter {
@@ -203,6 +200,7 @@ html, body {
   width: 186px;
   height: 21px;
   border-radius: 4px;
+  margin: 10px;
 }
 
 .content .rightContent .rightContentHeader .noOfItems {
