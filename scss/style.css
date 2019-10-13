@@ -219,11 +219,12 @@ html, body {
   color: #FFFFFF;
 }
 
-.content .rightContent .card {
+.content .rightContent #card {
   overflow: scroll;
+  height: 750px;
 }
 
-.content .rightContent .card .rightContentCards {
+.content .rightContent #card .rightContentCards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,26 +236,26 @@ html, body {
   margin: 20px;
 }
 
-.content .rightContent .card .rightContentCards .deleteIcon img {
+.content .rightContent #card .rightContentCards .deleteIcon img {
   padding-top: 44px;
   width: 38px;
 }
 
-.content .rightContent .card .rightContentCards .cardContent {
+.content .rightContent #card .rightContentCards .cardContent {
   padding: 10px;
   font-family: Segoe UI;
 }
 
-.content .rightContent .card .rightContentCards .cardContent #memberName {
+.content .rightContent #card .rightContentCards .cardContent #memberName {
   font-size: 22px;
 }
 
-.content .rightContent .card .rightContentCards .cardContent #details {
+.content .rightContent #card .rightContentCards .cardContent #details {
   font-size: 14px;
   color: #2D89E6;
 }
 
-.content .rightContent .card .rightContentCards .cardContent p {
+.content .rightContent #card .rightContentCards .cardContent p {
   color: #6A6A6A;
   font-size: 14px;
   margin: 5px;

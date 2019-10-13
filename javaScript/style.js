@@ -2,6 +2,10 @@ let save = document.getElementById('save');
 members = localStorage.getItem('teamMembers') ?
 JSON.parse(localStorage.getItem('teamMembers')) : []
 
+members.forEach(element => {
+    document.getElementById("card").innerHTML += displayCard(element.name, element.email, element.major, element.role, element.biograghy);
+});
+
 function createMember(name, email, major, role, biography) 
 {
     this.name = name;
@@ -37,7 +41,7 @@ save.addEventListener("click", function(e) {
             members.splice(index, 0, member);
             localStorage.setItem('teamMembers', JSON.stringify(members));
     }
-
+    document.getElementById("card").innerHTML += displayCard(memeberName, memberEmail, memberMajor, memberRole, memberBiography);
     console.log(members);
 });
 
@@ -59,4 +63,17 @@ function emailIsUnique (enteredEmail){
         return false;
     }
     return true;
+ }
+
+ function displayCard(name, email, major, role, biograghy ) {
+    return ` <div class="rightContentCards">
+        <div class="deleteIcon">
+            <img src="images/delete-icon.png" alt="delete">
+        </div>
+        <div class="cardContent">
+            <b id="memberName">${name}</b>
+            <p><b id="details">${email} / ${major} / ${role} </b></p>
+            <p> ${biography} </p>
+        </div>
+        </div>`
  }

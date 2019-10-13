@@ -182,8 +182,9 @@ html, body {
                 }
             }
         }
-        .card {
+        #card {
             overflow: scroll;
+            height: 750px;
 
             .rightContentCards {
                 @include flexDisplay(flex, row);
