@@ -18,22 +18,27 @@ save.addEventListener("click", function(e) {
     let memberRole = document.getElementById("role").value;
     let memberBiography = document.getElementById("biography").value;
     let addBottom = document.getElementById("addToBottom").checked;
+    let index = document.getElementById("index").value;
     let member = new createMember(memeberName, memberEmail, memberMajor, memberRole, memberBiography);
     let valid = required(memeberName, memberEmail, memberMajor, memberRole, memberBiography);
     let unique = emailIsUnique(memberEmail);
-    if(valid && unique && !addBottom) 
+    if(valid && unique && !addBottom && index == "") 
     {
         members.push(member);
         localStorage.setItem('teamMembers', JSON.stringify(members));
     }
     else 
-    {
-        members.shift(member);
-        localStorage.setItem('teamMembers', JSON.stringify(members));
-        let allMembers = new Array();
-        allMembers = localStorage.getItem('teamMembers') ?
-        JSON.parse(localStorage.getItem('teamMembers')) : []
+        if(index == "")
+        {
+            members.unshift(member);
+            localStorage.setItem('teamMembers', JSON.stringify(members));
+        }
+    else {
+            members.splice(index, 0, member);
+            localStorage.setItem('teamMembers', JSON.stringify(members));
     }
+
+    console.log(members);
 });
 
 function required(name, email, major, role, biography) 

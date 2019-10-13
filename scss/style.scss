@@ -84,7 +84,7 @@ html, body {
         .select {
             @include position(325px, 49px);
             background-color: #FFFFFF;
-            background-image: url("../images/arrow.png");
+            padding: 10px; 
         }
 
         #name, #email {

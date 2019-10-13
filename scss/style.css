@@ -87,8 +87,7 @@ html, body {
   width: 325px;
   height: 49px;
   background-color: #FFFFFF;
-  background-image: url("../images/arrow.png");
-  color: #AEAEAE !important;
+  padding: 10px;
 }
 
 .content .left-content #name, .content .left-content #email {
