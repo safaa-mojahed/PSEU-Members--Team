@@ -32,6 +32,7 @@ html, body {
     margin: 0px;
     padding: 0px;
     width: 100%;
+    overflow: hidden;
 }
 
 .root {
@@ -64,6 +65,7 @@ html, body {
         border: 1px solid $colorGray;
         border-radius: 25px;
         width: 350px;
+        height: 680px;
 
         .memberHeader b {
             @include flexDisplayContent(flex, center);
@@ -120,7 +122,7 @@ html, body {
         margin-left: 15px;
         background: #F6F6F6;
         width: 70%;
-        overflow: auto;
+        height: 900px;
 
         .rightContentHeader {
             @include flexDisplay(flex, row);
@@ -180,36 +182,39 @@ html, body {
                 }
             }
         }
-        
-        .rightContentCards {
-            @include flexDisplay(flex, row);
-            height: 130px;
-            overflow: hidden;
+        .card {
+            overflow: scroll;
 
-            .deleteIcon img {
-               padding-top: 44px;
-                width: 38px;
-            }
-            
-            .cardContent {
-                padding: 10px;
-                font-family: $fontSego;
-
-                #memberName {
-                    font-size: 22px;  
+            .rightContentCards {
+                @include flexDisplay(flex, row);
+                height: 130px;
+                margin: 20px;
+                
+                .deleteIcon img {
+                   padding-top: 44px;
+                    width: 38px;
                 }
-
-                #details {
-                    font-size: 14px;
-                    color: $colorBlue;
+                
+                .cardContent {
+                    padding: 10px;
+                    font-family: $fontSego;
+    
+                    #memberName {
+                        font-size: 22px;  
+                    }
+    
+                    #details {
+                        font-size: 14px;
+                        color: $colorBlue;
+                    }
+    
+                    p {
+                        color: #6A6A6A;
+                        font-size: 14px;
+                        margin: 5px;
+                    }
                 }
-
-                p {
-                    color: #6A6A6A;
-                    font-size: 14px;
-                    margin: 5px;
-                }
-            }
+        }
         }
     }
 }

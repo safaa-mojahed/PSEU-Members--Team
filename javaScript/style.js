@@ -1,7 +1,8 @@
- let save = document.getElementById('save');
+let save = document.getElementById('save');
 let members = new Array();
 
-function createMember(name, email, major, role, biography) {
+function createMember(name, email, major, role, biography) 
+{
     this.name = name;
     this.email = email;
     this.major = major;
@@ -20,14 +21,16 @@ save.addEventListener("click", function(e) {
     let valid = required(memeberName, memberEmail, memberMajor, memberRole, memberBiography);
     let unique = emailIsUnique(memberEmail);
     console.log(addBottom);
-    if(valid && unique && !addBottom) {
+    if(valid && unique && !addBottom) 
+    {
         members.push(member);
         localStorage.setItem('teamMembers', JSON.stringify(members));
         let allMembers = new Array();
         allMembers = localStorage.getItem('teamMembers') ?
         JSON.parse(localStorage.getItem('teamMembers')) : []
     }
-    else {
+    else 
+    {
         members.shift(member);
         localStorage.setItem('teamMembers', JSON.stringify(members));
         let allMembers = new Array();

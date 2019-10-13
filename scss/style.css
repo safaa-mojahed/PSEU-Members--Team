@@ -7,6 +7,7 @@ html, body {
   margin: 0px;
   padding: 0px;
   width: 100%;
+  overflow: hidden;
 }
 
 .root {
@@ -56,6 +57,7 @@ html, body {
   border: 1px solid #C3C3C3;
   border-radius: 25px;
   width: 350px;
+  height: 680px;
 }
 
 .content .left-content .memberHeader b {
@@ -130,7 +132,7 @@ html, body {
   margin-left: 15px;
   background: #F6F6F6;
   width: 70%;
-  overflow: auto;
+  height: 900px;
 }
 
 .content .rightContent .rightContentHeader {
@@ -217,7 +219,11 @@ html, body {
   color: #FFFFFF;
 }
 
-.content .rightContent .rightContentCards {
+.content .rightContent .card {
+  overflow: scroll;
+}
+
+.content .rightContent .card .rightContentCards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,29 +232,29 @@ html, body {
       -ms-flex-direction: row;
           flex-direction: row;
   height: 130px;
-  overflow: hidden;
+  margin: 20px;
 }
 
-.content .rightContent .rightContentCards .deleteIcon img {
+.content .rightContent .card .rightContentCards .deleteIcon img {
   padding-top: 44px;
   width: 38px;
 }
 
-.content .rightContent .rightContentCards .cardContent {
+.content .rightContent .card .rightContentCards .cardContent {
   padding: 10px;
   font-family: Segoe UI;
 }
 
-.content .rightContent .rightContentCards .cardContent #memberName {
+.content .rightContent .card .rightContentCards .cardContent #memberName {
   font-size: 22px;
 }
 
-.content .rightContent .rightContentCards .cardContent #details {
+.content .rightContent .card .rightContentCards .cardContent #details {
   font-size: 14px;
   color: #2D89E6;
 }
 
-.content .rightContent .rightContentCards .cardContent p {
+.content .rightContent .card .rightContentCards .cardContent p {
   color: #6A6A6A;
   font-size: 14px;
   margin: 5px;
