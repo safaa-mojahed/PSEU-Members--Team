@@ -18,6 +18,7 @@ function createMember(name, email, major, role, biography)
     this.major = major;
     this.role = role;
     this.biography = biography;
+    this.date = Date();
 }
 
 save.addEventListener("click", function(e) {
