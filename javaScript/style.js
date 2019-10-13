@@ -5,11 +5,13 @@ JSON.parse(localStorage.getItem('teamMembers')) : []
 function displayItems() {
     document.getElementById("card").innerHTML = "";
     members.forEach(element => {
-    document.getElementById("card").innerHTML += displayCard(element.name, element.email, element.major, element.role, element.biography);
+    document.getElementById("card").innerHTML += displayCard(element.name,
+    element.email, element.major, element.role, element.biography);
     });
 }
 
 displayItems();
+displayNoOfItems();
 
 function createMember(name, email, major, role, biography) 
 {
@@ -36,19 +38,21 @@ save.addEventListener("click", function(e) {
             members.push(member);
             localStorage.setItem('teamMembers', JSON.stringify(members));
             displayItems();
-
+            displayNoOfItems();
         }
     else 
         if(valid && unique && index == "") {
                 members.unshift(member);
                 localStorage.setItem('teamMembers', JSON.stringify(members));
                 displayItems();
+                displayNoOfItems();
             }
     else 
         if(valid && unique && !addBottom ) {
                 members.splice(index, 0, member);
                 localStorage.setItem('teamMembers', JSON.stringify(members));
                 displayItems();
+                displayNoOfItems();
             }
     console.log(members);
 });
@@ -85,3 +89,10 @@ function emailIsUnique (enteredEmail){
         </div>
         </div>`
  }
+
+ function displayNoOfItems() {
+    document.getElementById("noOfItems").innerHTML = "";
+     let noOfItems = `<p>${members.length} ITEMS</p>`
+    document.getElementById("noOfItems").innerHTML = noOfItems;
+ } 
+ console.log(members.length);

@@ -204,7 +204,7 @@ html, body {
   margin: 10px;
 }
 
-.content .rightContent .rightContentHeader .noOfItems {
+.content .rightContent .rightContentHeader #noOfItems {
   background-color: #2D89E6;
   border-bottom-left-radius: 22px;
   border-top-left-radius: 22px;
@@ -212,7 +212,7 @@ html, body {
   padding-left: 15px;
 }
 
-.content .rightContent .rightContentHeader .noOfItems p {
+.content .rightContent .rightContentHeader #noOfItems p {
   font-size: 13px;
   font-family: Segoe UI;
   color: #FFFFFF;
