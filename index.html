@@ -40,6 +40,7 @@
                     <option value="full-stack-developer">Full-Stack Developer</option>
                     <option value="designer">UI/UX Designer</option>
                 </select>
+            <!-- this field to enter the biography. -->
             </div>
             <p id="member-biography"></p>
         </div>
@@ -49,21 +50,27 @@
             <button id="cancel-board-button">CANCEL</button>
         </div>
     </div>
+    <!-- the root class contains everything in the page except the second artboard. -->
     <div class="root">
+        <!-- the main header -->
         <div class="header">
             <h1><b>PSEU Team Memebers</b></h1>
         </div>
+        <!-- the content class contain the left and the right content of the page. -->
         <div class="content">
             <div class="left-content">
+                <!-- this class to build the strucure for adding new member. -->
                 <div class="add-member-header">
                     <b>Add new member</b>
                 </div>
+                <!-- name and email structure. -->
                 <div class="member-info">
                     <input id="name" type="text" placeholder="name">
                 </div>
                 <div class="member-info">
                     <input id="email" type="email" placeholder="Email">
                 </div>
+                <!-- creae the major and role in select list -->
                 <div class="member-info">
                     <select class="select" id="major">
                         <option value="major" selected disabled value=" ">Major</option>
@@ -85,6 +92,7 @@
                 <div class="member-info">
                     <textarea id="biography" cols="46" rows="10" maxlength="1500" minlength="500" placeholder="Biography"></textarea>
                 </div>
+                <!-- the checkbox and index inputs structure. -->
                 <form class="inputs">
                     <input id="add-botton" type="checkbox"> Add to bottom / or to index
                     <input id="index" type="number" min="0" style="width: 55px; margin: 0px;">
@@ -95,6 +103,8 @@
             </div>
             <div class="right-content">
                 <div class="right-content-header">
+                    <!-- the search class contain the header for the right content in the page,
+                    which include the sort, role, major, and search filter. -->
                     <div class="search">
                         <p>SORT BY</p>
                         <select id="sort">
@@ -124,6 +134,7 @@
                     <div id="no-of-items">
                     </div>
                 </div>
+                <!-- this class to show the member the cards in the right content. -->
                 <div id="card">
                 </div>
             </div>
