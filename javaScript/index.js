@@ -118,7 +118,7 @@ function displayNoOfItems() {
     document.getElementById("no-of-items").innerHTML = noOfItems;
 }
 
-//add eventListener to 
+//add eventListener to every item in the page.
 item.addEventListener("click", function() {
     let name = this.name;
     let email = this.email;
@@ -129,6 +129,7 @@ item.addEventListener("click", function() {
     document.getElementById("second-artboard").style.display = "inline";
 });
 
+//this function will the display the the whole card of the uder, when the user click on that item.
 function displayItem(name, email, major, role, biography) {
     document.getElementById("member-name").innerHTML = name;
     document.getElementById("member-deatails").innerHTML = email;
@@ -137,10 +138,12 @@ function displayItem(name, email, major, role, biography) {
     document.getElementById("member-biography").innerHTML = biography;
 }
 
+//this function will close the second artboard if the user click on x icon.
 cancel.addEventListener("click", function() {
     document.getElementById("second-artboard").style.display = "none";
 })
 
+//this function will close the second artboard if the user clidk on cancel button.
 close.addEventListener("click", function() {
     document.getElementById("second-artboard").style.display = "none";
 })
