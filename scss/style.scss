@@ -1,308 +1,312 @@
 // @import 'scss/mixin';
-$colorBlue: #2D89E6;
-$colorWhite: #FFFFFF;
-$colorGray: #C3C3C3;
+$colorBlue: #2d89e6;
+$colorWhite: #ffffff;
+$colorGray: #c3c3c3;
 $fontSego: Segoe UI;
 
-@mixin flexDisplay($display, $flex-direction) { 
-    display: $display;
-    flex-direction: $flex-direction;
+@mixin flexDisplay($display, $flex-direction) {
+	display: $display;
+	flex-direction: $flex-direction;
 }
 
 @mixin flexDisplayContent($display, $justify-content) {
-    display: $display;
-    justify-content: $justify-content;
+	display: $display;
+	justify-content: $justify-content;
 }
 
 @mixin textStyle($font-size, $font-family, $color) {
-    font-size: $font-size;
-    font-family: $font-family;
-    color: $color;
+	font-size: $font-size;
+	font-family: $font-family;
+	color: $color;
 }
 @mixin position($width, $height) {
-    width: $width;
-    height: $height;
+	width: $width;
+	height: $height;
 }
 
 * {
-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    // overflow: hidden;
+html,
+body {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	// overflow: hidden;
 }
 
 .root {
- width: 100%;
+	width: 100%;
 }
 
 .header {
-    @include position(100%, 76px);
-    background-color: $colorBlue;
+	@include position(100%, 76px);
+	background-color: $colorBlue;
 
-    h1 {
-        margin: 0px;
-    }
+	h1 {
+		margin: 0px;
+	}
 
-    b {
-        @include flexDisplayContent(flex, center);
-        @include textStyle(22px, $fontSego, $colorWhite);
-        margin: 0px;
-        padding-top: 20px;
-    }
+	b {
+		@include flexDisplayContent(flex, center);
+		@include textStyle(22px, $fontSego, $colorWhite);
+		margin: 0px;
+		padding-top: 20px;
+	}
 }
 
 .content {
-    width: 100%;
-    display: flex;
+	width: 100%;
+	display: flex;
 
-    .left-content {
-        @include flexDisplay(flex, column);
-        margin: 30px 0px 0px 80px;;
-        border: 1px solid $colorGray;
-        border-radius: 25px;
-        width: 350px;
-        height: 680px;
+	.left-content {
+		@include flexDisplay(flex, column);
+		margin: 30px 0px 0px 80px;
+		border: 1px solid $colorGray;
+		border-radius: 25px;
+		width: 350px;
+		height: 680px;
 
-        .memberHeader b {
-            @include flexDisplayContent(flex, center);
-            @include textStyle(17px, $fontSego, #707070);
-            margin: 20px;
-        }
-        
-        .memberInfo input, select, #biography {
-            @include textStyle(14px, $fontSego, #AEAEAE !important);
-            margin: 5px 10px 5px 10px;
-            border: 1px solid $colorGray;
-            border-radius: 13px;
-            padding: 15px;
-        }
+		.memberHeader b {
+			@include flexDisplayContent(flex, center);
+			@include textStyle(17px, $fontSego, #707070);
+			margin: 20px;
+		}
 
-        .select {
-            @include position(325px, 49px);
-            background-color: #FFFFFF;
-            padding: 10px; 
-        }
+		.memberInfo input,
+		select,
+		#biography {
+			@include textStyle(14px, $fontSego, #aeaeae !important);
+			margin: 5px 10px 5px 10px;
+			border: 1px solid $colorGray;
+			border-radius: 13px;
+			padding: 15px;
+		}
 
-        #name, #email {
-            width: 324px;
-        }
-        
-        #biography {
-            resize: none;
-        }
-        
-        .inputs {
-            font-size: 13px;
-            padding-top: 15px;
+		.select {
+			@include position(325px, 49px);
+			background-color: #ffffff;
+			padding: 10px;
+		}
 
-            input {
-                margin-left: 25px;
-                margin-bottom: 50px;
-                border: 1px solid $colorGray;
-            }
-        }
-        
-        .saveButton button {
-            @include textStyle(17px, $fontSego, $colorWhite);
-            @include position(100%, 60px);
-            background-color: $colorBlue;
-            border: none;
-            border-bottom-right-radius: 25px;
-            border-bottom-left-radius: 25px;
-        
-        }
-    }
+		#name,
+		#email {
+			width: 324px;
+		}
 
-    .rightContent {
-        @include flexDisplay(flex, column);
-        margin-left: 15px;
-        background: #F6F6F6;
-        width: 70%;
-        height: 850px;
+		#biography {
+			resize: none;
+		}
 
-        .rightContentHeader {
-            @include flexDisplay(flex, row);
-            margin: 50px 0px 50px 0px;
-            justify-content: space-between;
+		.inputs {
+			font-size: 13px;
+			padding-top: 15px;
 
-            .search {
-                background: $colorBlue;
-                width: 70%;
-                @include flexDisplay(flex, row);
-                border-bottom-right-radius: 30px;
-                border-top-right-radius: 30px;  
-                align-items: center;
+			input {
+				margin-left: 25px;
+				margin-bottom: 50px;
+				border: 1px solid $colorGray;
+			}
+		}
 
-                p {
-                    @include textStyle(13px, $fontSego, $colorWhite);
-                    margin-left: 30px;
-                }
+		.saveButton button {
+			@include textStyle(17px, $fontSego, $colorWhite);
+			@include position(100%, 60px);
+			background-color: $colorBlue;
+			border: none;
+			border-bottom-right-radius: 25px;
+			border-bottom-left-radius: 25px;
+		}
+	}
 
-                select, input {
-                    @include textStyle(10px, $fontSego, #8B8B8B);
-                    border-radius: 9px;
-                    border: none;
-                }
-                
-                #sort {
-                    @include position(50px, 20px);
-                    margin: 10px;
-                }
+	.rightContent {
+		@include flexDisplay(flex, column);
+		margin-left: 15px;
+		background: #f6f6f6;
+		width: 70%;
+		height: 850px;
 
-                .filter {
-                    padding: 5px 10px;
-                    border-right: 1px solid $colorWhite;
-                    border-left: 1px solid $colorWhite;
+		.rightContentHeader {
+			@include flexDisplay(flex, row);
+			margin: 50px 0px 50px 0px;
+			justify-content: space-between;
 
-                    select{
-                        @include position(81px, 20px);
-                    }
-                }
-                
-                #search {
-                    @include position(186px, 21px);
-                    border-radius: 4px;
-                    margin: 10px;
-                }
-            }
+			.search {
+				background: $colorBlue;
+				width: 70%;
+				@include flexDisplay(flex, row);
+				border-bottom-right-radius: 30px;
+				border-top-right-radius: 30px;
+				align-items: center;
 
-            #noOfItems {
-                background-color: $colorBlue;
-                border-bottom-left-radius: 22px;
-                border-top-left-radius: 22px;
-                width: 89px;
-                padding-left: 15px;
+				p {
+					@include textStyle(13px, $fontSego, $colorWhite);
+					margin-left: 30px;
+				}
 
-                p {
-                    @include textStyle(13px, $fontSego, $colorWhite);
-                }
-            }
-        }
-        #card {
-            overflow: scroll;
+				select,
+				input {
+					@include textStyle(10px, $fontSego, #8b8b8b);
+					border-radius: 9px;
+					border: none;
+				}
 
-            .rightContentCards {
-                @include flexDisplay(flex, row);
-                height: 130px;
-                margin: 20px;
-                overflow: hidden;
-                
-                .deleteIcon img {
-                   padding-top: 44px;
-                    width: 38px;
-                }
-                
-                #cardContent {
-                    padding: 10px;
-                    font-family: $fontSego;
-    
-                    #memberName {
-                        font-size: 22px;  
-                    }
-    
-                    #details {
-                        font-size: 14px;
-                        color: $colorBlue;
-                    }
-    
-                    p {
-                        color: #6A6A6A;
-                        font-size: 14px;
-                        margin: 5px;
-                    }
-                }
-        }
-        }
-    }
+				#sort {
+					@include position(50px, 20px);
+					margin: 10px;
+				}
+
+				.filter {
+					padding: 5px 10px;
+					border-right: 1px solid $colorWhite;
+					border-left: 1px solid $colorWhite;
+
+					select {
+						@include position(81px, 20px);
+					}
+				}
+
+				#search {
+					@include position(186px, 21px);
+					border-radius: 4px;
+					margin: 10px;
+				}
+			}
+
+			#noOfItems {
+				background-color: $colorBlue;
+				border-bottom-left-radius: 22px;
+				border-top-left-radius: 22px;
+				width: 89px;
+				padding-left: 15px;
+
+				p {
+					@include textStyle(13px, $fontSego, $colorWhite);
+				}
+			}
+		}
+		#card {
+			overflow: scroll;
+
+			.rightContentCards {
+				@include flexDisplay(flex, row);
+				height: 130px;
+				margin: 20px;
+				overflow: hidden;
+
+				.deleteIcon img {
+					padding-top: 44px;
+					width: 38px;
+				}
+
+				#cardContent {
+					padding: 10px;
+					font-family: $fontSego;
+
+					#memberName {
+						font-size: 22px;
+					}
+
+					#details {
+						font-size: 14px;
+						color: $colorBlue;
+					}
+
+					p {
+						color: #6a6a6a;
+						font-size: 14px;
+						margin: 5px;
+					}
+				}
+			}
+		}
+	}
 }
 
 #secound-artbourd {
-    position: fixed;
-    display: none;
-    width: 80%;
-    height: 500px;
-    flex-direction: column;
-    margin: 10%;
-    background: $colorWhite;
-    border-radius: 42px;
+	position: fixed;
+	display: none;
+	width: 80%;
+	height: 500px;
+	flex-direction: column;
+	margin: 10%;
+	background: $colorWhite;
+	border-radius: 42px;
 
-    #close-bourd {
-        color: $colorWhite;
-        background: #000000;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        font-size: 22px;
-        font-family: $fontSego;
-    }
-    .bourd-content{
-        #member-name {
-            font-size: 68px;
-            color: #000000;
-            font-family: $fontSego;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .member-details {
-            display: flex;
-            justify-content: center;
-            
-            select {
-                border: 1px solid $colorGray;
-                border-radius: 7px;
-                color: $colorBlue;
-                font-size: 13px;
-                font-family: $fontSego;
-                font-weight: bold;
-                height: 24px;
-                margin: 10px;
+	#close-bourd {
+		color: $colorWhite;
+		background: #000000;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		font-size: 22px;
+		font-family: $fontSego;
+	}
+	.bourd-content {
+		#member-name {
+			font-size: 68px;
+			color: #000000;
+			font-family: $fontSego;
+			display: flex;
+			justify-content: center;
+		}
 
-            }
+		.member-details {
+			display: flex;
+			justify-content: center;
 
-            #member-deatails, p {
-                font-size: 13px;
-                color: $colorBlue;
-                font-family: $fontSego;
-            }
-        }
+			select {
+				border: 1px solid $colorGray;
+				border-radius: 7px;
+				color: $colorBlue;
+				font-size: 13px;
+				font-family: $fontSego;
+				font-weight: bold;
+				height: 24px;
+				margin: 10px;
+			}
 
-        #member-biography {
-            padding: 0px 15%;
-            display: flex;
-            justify-content: center;
-            color: #6A6A6A;
-            font-size: 14px;
-            font-family: $fontSego;
-        }
-    }
-    .bourd-buttons {
-        display: flex;
-        justify-content: center;
+			#member-deatails,
+			p {
+				font-size: 13px;
+				color: $colorBlue;
+				font-family: $fontSego;
+			}
+		}
 
-        button{
-            width: 130px;
-            margin: 30px;
-            padding: 15px;
-            border: none;
-            color: $colorWhite;
-        }
-        #delete-bourd-button {
-            background-color: #FF4A4A;
-        }
+		#member-biography {
+			padding: 0px 15%;
+			display: flex;
+			justify-content: center;
+			color: #6a6a6a;
+			font-size: 14px;
+			font-family: $fontSego;
+		}
+	}
+	.bourd-buttons {
+		display: flex;
+		justify-content: center;
 
-        #save-bourd-button {
-            background-color: $colorBlue;
-        }
+		button {
+			width: 130px;
+			margin: 30px;
+			padding: 15px;
+			border: none;
+			color: $colorWhite;
+		}
+		#delete-bourd-button {
+			background-color: #ff4a4a;
+		}
 
-        #cancel-bourd-button {
-            background-color: #484848;
-        }
-    }
+		#save-bourd-button {
+			background-color: $colorBlue;
+		}
+
+		#cancel-bourd-button {
+			background-color: #484848;
+		}
+	}
 }
