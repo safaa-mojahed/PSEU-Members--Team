@@ -9,13 +9,13 @@ Finally when the user click on any member, the whole card appeare, and he can ed
 
 I used this applications while working:
 This project is done by using:
-visual studio code program
-github
-Adobe xd
+visual studio code program, 
+github, 
+Adobe xd, 
 
 I write this project in :
-html 
-SASS
+html,  
+SASS, 
 javascript
 
 
