@@ -32,7 +32,7 @@ save.addEventListener("click", function(e) {
     let memberMajor = document.getElementById("major").value;
     let memberRole = document.getElementById("role").value;
     let memberBiography = document.getElementById("biography").value;
-    let addBottom = document.getElementById("addToBottom").checked;
+    let addBottom = document.getElementById("add-bottom").checked;
     let index = document.getElementById("index").value;
     let member = new createMember(memeberName, memberEmail, memberMajor, memberRole, memberBiography);
     let valid = required(memeberName, memberEmail, memberMajor, memberRole, memberBiography);
@@ -77,12 +77,12 @@ function emailIsUnique(enteredEmail) {
 }
 
 function displayCard(name, email, major, role, biography) {
-    return ` <div class="rightContentCards">
-        <div class="deleteIcon">
+    return ` <div class="right-content-cards">
+        <div class="delete-icon">
             <img src="images/delete-icon.png" alt="delete">
         </div>
-        <div id="cardContent">
-            <b id="memberName">${name}</b>
+        <div id="card-content">
+            <b id="member-name">${name}</b>
             <p><b id="details">${email} / ${major} / ${role} </b></p>
             <p> ${biography} </p>
         </div>
