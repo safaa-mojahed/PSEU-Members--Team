@@ -223,14 +223,14 @@ html, body {
 }
 
 .secound-artbourd {
-    display: flex;
-    justify-content: center;
+    position: fixed;
+    display: none;
     width: 80%;
     height: 500px;
+    flex-direction: column;
     margin: 10%;
     background: $colorWhite;
     border-radius: 42px;
-    flex-direction: column;
 
     #close-bourd {
         color: $colorWhite;
@@ -243,36 +243,51 @@ html, body {
         font-size: 22px;
         font-family: $fontSego;
     }
+    .bourd-content{
+        #member-name {
+            font-size: 68px;
+            color: #000000;
+            font-family: $fontSego;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .member-details {
+            display: flex;
+            justify-content: center;
+            
+            select {
+                border: 1px solid $colorGray;
+                border-radius: 7px;
+                color: $colorBlue;
+                font-size: 13px;
+                font-family: $fontSego;
+                font-weight: bold;
+                height: 24px;
+                margin: 10px;
 
-    #member-name {
-        font-size: 68px;
-        color: #000000;
-        font-family: $fontSego;
-        display: flex;
-        justify-content: center;;
+            }
+
+            #member-deatails, p {
+                font-size: 13px;
+                color: $colorBlue;
+                font-family: $fontSego;
+            }
+        }
+
+        #member-biography {
+            padding: 0px 15%;
+            display: flex;
+            justify-content: center;
+            color: #6A6A6A;
+            font-size: 14px;
+            font-family: $fontSego;
+        }
     }
-
-    #member-deatails {
-        font-size: 13px;
-        color: $colorBlue;
-        font-family: $fontSego;
-        display: flex;
-        justify-content: center;
-    }
-
-    #member-biography {
-        display: flex;
-        justify-content: center;
-        width: 50%;
-        color: #6A6A6A;
-        font-size: 14px;
-        font-family: $fontSego;
-    }
-
     .bourd-buttons {
         display: flex;
         justify-content: center;
-        
+
         button{
             width: 130px;
             margin: 30px;
