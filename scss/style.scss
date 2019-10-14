@@ -184,8 +184,8 @@ html, body {
         }
         #card {
             overflow: scroll;
-           // height: 130px;
-           height: 400px;;
+        //    height: 130px;
+        //    height: 400px;;
 
             .rightContentCards {
                 @include flexDisplay(flex, row);
@@ -218,6 +218,78 @@ html, body {
                     }
                 }
         }
+        }
+    }
+}
+
+.secound-artbourd {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 500px;
+    margin: 10%;
+    background: $colorWhite;
+    border-radius: 42px;
+    flex-direction: column;
+
+    #close-bourd {
+        color: $colorWhite;
+        background: #000000;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        font-size: 22px;
+        font-family: $fontSego;
+    }
+
+    #member-name {
+        font-size: 68px;
+        color: #000000;
+        font-family: $fontSego;
+        display: flex;
+        justify-content: center;;
+    }
+
+    #member-deatails {
+        font-size: 13px;
+        color: $colorBlue;
+        font-family: $fontSego;
+        display: flex;
+        justify-content: center;
+    }
+
+    #member-biography {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        color: #6A6A6A;
+        font-size: 14px;
+        font-family: $fontSego;
+    }
+
+    .bourd-buttons {
+        display: flex;
+        justify-content: center;
+        
+        button{
+            width: 130px;
+            margin: 30px;
+            padding: 15px;
+            border: none;
+            color: $colorWhite;
+        }
+        #delete-bourd-button {
+            background-color: #FF4A4A;
+        }
+
+        #save-bourd-button {
+            background-color: $colorBlue;
+        }
+
+        #cancel-bourd-button {
+            background-color: #484848;
         }
     }
 }

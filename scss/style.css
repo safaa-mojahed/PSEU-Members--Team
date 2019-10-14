@@ -220,7 +220,6 @@ html, body {
 
 .content .rightContent #card {
   overflow: scroll;
-  height: 400px;
 }
 
 .content .rightContent #card .rightContentCards {
@@ -259,5 +258,105 @@ html, body {
   color: #6A6A6A;
   font-size: 14px;
   margin: 5px;
+}
+
+.secound-artbourd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  height: 500px;
+  margin: 10%;
+  background: #FFFFFF;
+  border-radius: 42px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.secound-artbourd #close-bourd {
+  color: #FFFFFF;
+  background: #000000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 22px;
+  font-family: Segoe UI;
+}
+
+.secound-artbourd #member-name {
+  font-size: 68px;
+  color: #000000;
+  font-family: Segoe UI;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.secound-artbourd #member-deatails {
+  font-size: 13px;
+  color: #2D89E6;
+  font-family: Segoe UI;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.secound-artbourd #member-biography {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  color: #6A6A6A;
+  font-size: 14px;
+  font-family: Segoe UI;
+}
+
+.secound-artbourd .bourd-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.secound-artbourd .bourd-buttons button {
+  width: 130px;
+  margin: 30px;
+  padding: 15px;
+  border: none;
+  color: #FFFFFF;
+}
+
+.secound-artbourd .bourd-buttons #delete-bourd-button {
+  background-color: #FF4A4A;
+}
+
+.secound-artbourd .bourd-buttons #save-bourd-button {
+  background-color: #2D89E6;
+}
+
+.secound-artbourd .bourd-buttons #cancel-bourd-button {
+  background-color: #484848;
 }
 /*# sourceMappingURL=style.css.map */
