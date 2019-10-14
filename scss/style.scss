@@ -67,7 +67,7 @@ body {
 		width: 350px;
 		height: 680px;
 
-		.member-header b {
+		.add-member-header b {
 			@include flexDisplayContent(flex, center);
 			@include textStyle(17px, $fontSego, #707070);
 			margin: 20px;
@@ -174,7 +174,7 @@ body {
 				}
 			}
 
-			#noOfItems {
+			#no-of-items {
 				background-color: $colorBlue;
 				border-bottom-left-radius: 22px;
 				border-top-left-radius: 22px;
@@ -224,7 +224,7 @@ body {
 	}
 }
 
-#secound-artbourd {
+#second-artboard {
 	position: fixed;
 	display: none;
 	width: 80%;
@@ -234,7 +234,7 @@ body {
 	background: $colorWhite;
 	border-radius: 42px;
 
-	#close-bourd {
+	#close-artboard {
 		color: $colorWhite;
 		background: #000000;
 		border-radius: 50%;
@@ -245,7 +245,7 @@ body {
 		font-size: 22px;
 		font-family: $fontSego;
 	}
-	.bourd-content {
+	.artboard-content {
 		#member-name {
 			font-size: 68px;
 			color: #000000;
@@ -286,7 +286,7 @@ body {
 			font-family: $fontSego;
 		}
 	}
-	.bourd-buttons {
+	.artboard-buttons {
 		display: flex;
 		justify-content: center;
 
@@ -297,15 +297,15 @@ body {
 			border: none;
 			color: $colorWhite;
 		}
-		#delete-bourd-button {
+		#delete-board-button {
 			background-color: #ff4a4a;
 		}
 
-		#save-bourd-button {
+		#save-board-button {
 			background-color: $colorBlue;
 		}
 
-		#cancel-bourd-button {
+		#cancel-board-button {
 			background-color: #484848;
 		}
 	}

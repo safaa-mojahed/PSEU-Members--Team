@@ -2,7 +2,7 @@ let save = document.getElementById('save');
 let item = document.getElementById('card');
 let cancel = document.getElementById('cancel-bourd-button');
 let deleteItem = document.getElementById('delete-bourd-button');
-let close = document.getElementById('close-bourd');
+let close = document.getElementById('close-artboard');
 members = localStorage.getItem('teamMembers') ?
     JSON.parse(localStorage.getItem('teamMembers')) : []
 
@@ -90,9 +90,9 @@ function displayCard(name, email, major, role, biography) {
 }
 
 function displayNoOfItems() {
-    document.getElementById("noOfItems").innerHTML = "";
+    document.getElementById("no-of-items").innerHTML = "";
     let noOfItems = `<p>${members.length} ITEMS</p>`
-    document.getElementById("noOfItems").innerHTML = noOfItems;
+    document.getElementById("no-of-items").innerHTML = noOfItems;
 }
 
 item.addEventListener("click", function() {
@@ -102,7 +102,7 @@ item.addEventListener("click", function() {
     let role = this.role;
     let biography = this.biography;
     let displayMember = displayItem(name, email, major, role, biography);
-    document.getElementById("secound-artbourd").style.display = "inline";
+    document.getElementById("second-artboard").style.display = "inline";
 });
 
 function displayItem(name, email, major, role, biography) {
@@ -114,9 +114,9 @@ function displayItem(name, email, major, role, biography) {
 }
 
 cancel.addEventListener("click", function() {
-    document.getElementById("secound-artbourd").style.display = "none";
+    document.getElementById("second-artboard").style.display = "none";
 })
 
 close.addEventListener("click", function() {
-    document.getElementById("secound-artbourd").style.display = "none";
+    document.getElementById("second-artboard").style.display = "none";
 })

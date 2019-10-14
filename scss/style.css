@@ -60,7 +60,7 @@ body {
   height: 680px;
 }
 
-.content .left-content .member-header b {
+.content .left-content .add-member-header b {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -210,7 +210,7 @@ body {
   margin: 10px;
 }
 
-.content .right-content .right-content-header #noOfItems {
+.content .right-content .right-content-header #no-of-items {
   background-color: #2d89e6;
   border-bottom-left-radius: 22px;
   border-top-left-radius: 22px;
@@ -218,7 +218,7 @@ body {
   padding-left: 15px;
 }
 
-.content .right-content .right-content-header #noOfItems p {
+.content .right-content .right-content-header #no-of-items p {
   font-size: 13px;
   font-family: Segoe UI;
   color: #ffffff;
@@ -266,7 +266,7 @@ body {
   margin: 5px;
 }
 
-#secound-artbourd {
+#second-artboard {
   position: fixed;
   display: none;
   width: 80%;
@@ -280,7 +280,7 @@ body {
   border-radius: 42px;
 }
 
-#secound-artbourd #close-bourd {
+#second-artboard #close-artboard {
   color: #ffffff;
   background: #000000;
   border-radius: 50%;
@@ -296,7 +296,7 @@ body {
   font-family: Segoe UI;
 }
 
-#secound-artbourd .bourd-content #member-name {
+#second-artboard .artboard-content #member-name {
   font-size: 68px;
   color: #000000;
   font-family: Segoe UI;
@@ -308,7 +308,7 @@ body {
           justify-content: center;
 }
 
-#secound-artbourd .bourd-content .member-details {
+#second-artboard .artboard-content .member-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,7 +317,7 @@ body {
           justify-content: center;
 }
 
-#secound-artbourd .bourd-content .member-details select {
+#second-artboard .artboard-content .member-details select {
   border: 1px solid #c3c3c3;
   border-radius: 7px;
   color: #2d89e6;
@@ -328,14 +328,14 @@ body {
   margin: 10px;
 }
 
-#secound-artbourd .bourd-content .member-details #member-deatails,
-#secound-artbourd .bourd-content .member-details p {
+#second-artboard .artboard-content .member-details #member-deatails,
+#second-artboard .artboard-content .member-details p {
   font-size: 13px;
   color: #2d89e6;
   font-family: Segoe UI;
 }
 
-#secound-artbourd .bourd-content #member-biography {
+#second-artboard .artboard-content #member-biography {
   padding: 0px 15%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -348,7 +348,7 @@ body {
   font-family: Segoe UI;
 }
 
-#secound-artbourd .bourd-buttons {
+#second-artboard .artboard-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -357,7 +357,7 @@ body {
           justify-content: center;
 }
 
-#secound-artbourd .bourd-buttons button {
+#second-artboard .artboard-buttons button {
   width: 130px;
   margin: 30px;
   padding: 15px;
@@ -365,15 +365,15 @@ body {
   color: #ffffff;
 }
 
-#secound-artbourd .bourd-buttons #delete-bourd-button {
+#second-artboard .artboard-buttons #delete-board-button {
   background-color: #ff4a4a;
 }
 
-#secound-artbourd .bourd-buttons #save-bourd-button {
+#second-artboard .artboard-buttons #save-board-button {
   background-color: #2d89e6;
 }
 
-#secound-artbourd .bourd-buttons #cancel-bourd-button {
+#second-artboard .artboard-buttons #cancel-board-button {
   background-color: #484848;
 }
 /*# sourceMappingURL=style.css.map */
