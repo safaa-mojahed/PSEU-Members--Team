@@ -1,4 +1,6 @@
 let save = document.getElementById('save');
+let item = document.getElementById("card");
+let secondArtbourd = document.getElementById("secound-artbourd");
 members = localStorage.getItem('teamMembers') ?
 JSON.parse(localStorage.getItem('teamMembers')) : []
 
@@ -95,4 +97,53 @@ function emailIsUnique (enteredEmail){
      let noOfItems = `<p>${members.length} ITEMS</p>`
     document.getElementById("noOfItems").innerHTML = noOfItems;
  } 
- console.log(members.length);
+
+ item.addEventListener("click", function() {
+    let name = this.name;
+    let email = this.email;
+    let major = this.major;
+    let role = this.role;
+    let biography = this.biography;
+    let displaymember = displayItem(name, email, major, role, biography);
+    document.getElementById("secound-artbourd").style.display = "inline";
+    display();
+});
+
+function displayItem(name, email, major, role, biography ) {
+        return `<div>
+        <p id="close-bourd">x</p>
+    </div>
+    <div class="bourd-content">
+        <b id="member-name"${name}</b>
+        <div class="member-details">
+            <p><b id="member-deatails">${email}/</b></p>
+            <select class="member-major">
+                <option value="major" selected disabled value=" ">${major}</option>
+                <option value="computerScience" >Computer Science</option>
+                <option value="computerEngineering">Computer Engineering</option>
+                <option value="informationTechnology">Information Technology</option>
+                <option value="informationSystem">Information System</option>
+            </select>
+            <p>/</p>
+            <select class="member-role">
+                <option value="role" selected disabled value=" ">${role}</option>
+                <option value="frontEndDeveloper">Front-End Developer</option>
+                <option value="backEndDeveloper">Back-End Developer</option>
+                <option value="fullStackDeveloper">Full-Stack Developer</option>
+                <option value="designer">UI/UX Designer</option>
+            </select>
+        </div>
+        <p id="member-biography">${biography}</p>
+    </div>
+    <div class="bourd-buttons">
+        <button id="delete-bourd-button">DELETE</button>
+        <button id="save-bourd-button">SAVE</button>
+        <button id="cancel-bourd-button">CANCEL</button>
+    </div>`
+ }
+
+ function display() {
+    document.getElementById("secondArtbourd").innerHTML = "";
+    document.getElementById("secondArtbourd").innerHTML += displayItem(element.name,
+    element.email, element.major, element.role, element.biography);
+    }

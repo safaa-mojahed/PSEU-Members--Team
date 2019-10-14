@@ -260,7 +260,7 @@ html, body {
   margin: 5px;
 }
 
-.secound-artbourd {
+#secound-artbourd {
   position: fixed;
   display: none;
   width: 80%;
@@ -274,7 +274,7 @@ html, body {
   border-radius: 42px;
 }
 
-.secound-artbourd #close-bourd {
+#secound-artbourd #close-bourd {
   color: #FFFFFF;
   background: #000000;
   border-radius: 50%;
@@ -290,7 +290,7 @@ html, body {
   font-family: Segoe UI;
 }
 
-.secound-artbourd .bourd-content #member-name {
+#secound-artbourd .bourd-content #member-name {
   font-size: 68px;
   color: #000000;
   font-family: Segoe UI;
@@ -302,7 +302,7 @@ html, body {
           justify-content: center;
 }
 
-.secound-artbourd .bourd-content .member-details {
+#secound-artbourd .bourd-content .member-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,7 +311,7 @@ html, body {
           justify-content: center;
 }
 
-.secound-artbourd .bourd-content .member-details select {
+#secound-artbourd .bourd-content .member-details select {
   border: 1px solid #C3C3C3;
   border-radius: 7px;
   color: #2D89E6;
@@ -322,13 +322,13 @@ html, body {
   margin: 10px;
 }
 
-.secound-artbourd .bourd-content .member-details #member-deatails, .secound-artbourd .bourd-content .member-details p {
+#secound-artbourd .bourd-content .member-details #member-deatails, #secound-artbourd .bourd-content .member-details p {
   font-size: 13px;
   color: #2D89E6;
   font-family: Segoe UI;
 }
 
-.secound-artbourd .bourd-content #member-biography {
+#secound-artbourd .bourd-content #member-biography {
   padding: 0px 15%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -341,7 +341,7 @@ html, body {
   font-family: Segoe UI;
 }
 
-.secound-artbourd .bourd-buttons {
+#secound-artbourd .bourd-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -350,7 +350,7 @@ html, body {
           justify-content: center;
 }
 
-.secound-artbourd .bourd-buttons button {
+#secound-artbourd .bourd-buttons button {
   width: 130px;
   margin: 30px;
   padding: 15px;
@@ -358,15 +358,15 @@ html, body {
   color: #FFFFFF;
 }
 
-.secound-artbourd .bourd-buttons #delete-bourd-button {
+#secound-artbourd .bourd-buttons #delete-bourd-button {
   background-color: #FF4A4A;
 }
 
-.secound-artbourd .bourd-buttons #save-bourd-button {
+#secound-artbourd .bourd-buttons #save-bourd-button {
   background-color: #2D89E6;
 }
 
-.secound-artbourd .bourd-buttons #cancel-bourd-button {
+#secound-artbourd .bourd-buttons #cancel-bourd-button {
   background-color: #484848;
 }
 /*# sourceMappingURL=style.css.map */
