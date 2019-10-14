@@ -8,6 +8,7 @@ body {
   margin: 0px;
   padding: 0px;
   width: 100%;
+  overflow: hidden;
 }
 
 .root {
@@ -73,9 +74,7 @@ body {
   margin: 20px;
 }
 
-.content .left-content .member-info input,
-.content .left-content select,
-.content .left-content #biography {
+.content .left-content .member-info input, .content .left-content select, .content .left-content #biography {
   font-size: 14px;
   font-family: Segoe UI;
   color: #aeaeae !important;
@@ -92,8 +91,7 @@ body {
   padding: 10px;
 }
 
-.content .left-content #name,
-.content .left-content #email {
+.content .left-content #name, .content .left-content #email {
   width: 324px;
 }
 

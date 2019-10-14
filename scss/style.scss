@@ -1,23 +1,28 @@
+// declare variablies for colors and font.
 $colorBlue: #2d89e6;
 $colorWhite: #ffffff;
 $colorGray: #c3c3c3;
 $fontSego: Segoe UI;
 
+//this function for display elements.
 @mixin flexDisplay($display, $flex-direction) {
 	display: $display;
 	flex-direction: $flex-direction;
 }
 
+//this function also for display elements but with different parameter.
 @mixin flexDisplayContent($display, $justify-content) {
 	display: $display;
 	justify-content: $justify-content;
 }
 
+//this function give the style for the text.
 @mixin textStyle($font-size, $font-family, $color) {
 	font-size: $font-size;
 	font-family: $font-family;
 	color: $color;
 }
+//this function give the width and the height for the elements.
 @mixin position($width, $height) {
 	width: $width;
 	height: $height;
@@ -32,13 +37,14 @@ body {
 	margin: 0px;
 	padding: 0px;
 	width: 100%;
-	// overflow: hidden;
+	overflow: hidden;
 }
 
 .root {
 	width: 100%;
 }
 
+//this the style for the main header
 .header {
 	@include position(100%, 76px);
 	background-color: $colorBlue;
@@ -55,6 +61,7 @@ body {
 	}
 }
 
+//style for the whole content for the first artboard.
 .content {
 	width: 100%;
 	display: flex;
@@ -73,9 +80,7 @@ body {
 			margin: 20px;
 		}
 
-		.member-info input,
-		select,
-		#biography {
+        .member-info input, select, #biography {
 			@include textStyle(14px, $fontSego, #aeaeae !important);
 			margin: 5px 10px 5px 10px;
 			border: 1px solid $colorGray;
@@ -83,14 +88,14 @@ body {
 			padding: 15px;
 		}
 
+        //this style for major and role, in the left content of the page.
 		.select {
 			@include position(325px, 49px);
 			background-color: #ffffff;
 			padding: 10px;
 		}
 
-		#name,
-		#email {
+		#name, #email {
 			width: 324px;
 		}
 
@@ -98,6 +103,7 @@ body {
 			resize: none;
 		}
 
+        //style for checkbox and for index filed.
 		.inputs {
 			font-size: 13px;
 			padding-top: 15px;
@@ -185,7 +191,9 @@ body {
 					@include textStyle(13px, $fontSego, $colorWhite);
 				}
 			}
-		}
+        }
+        
+        //style for the cards that will be displayed in the right content.
 		#card {
 			overflow: scroll;
 
@@ -224,6 +232,7 @@ body {
 	}
 }
 
+//style for the second artboard.
 #second-artboard {
 	position: fixed;
 	display: none;
@@ -234,6 +243,7 @@ body {
 	background: $colorWhite;
 	border-radius: 42px;
 
+    //style for the close  
 	#close-artboard {
 		color: $colorWhite;
 		background: #000000;
@@ -244,7 +254,8 @@ body {
 		justify-content: center;
 		font-size: 22px;
 		font-family: $fontSego;
-	}
+    }
+    
 	.artboard-content {
 		#member-name {
 			font-size: 68px;
@@ -254,6 +265,7 @@ body {
 			justify-content: center;
 		}
 
+        //style for email, major and role.
 		.member-details {
 			display: flex;
 			justify-content: center;

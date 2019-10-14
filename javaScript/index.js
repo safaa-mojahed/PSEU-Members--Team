@@ -1,6 +1,6 @@
 let save = document.getElementById('save');
 let item = document.getElementById('card');
-let cancel = document.getElementById('cancel-bourd-button');
+let cancel = document.getElementById('cancel-board-button');
 let deleteItem = document.getElementById('delete-bourd-button');
 let close = document.getElementById('close-artboard');
 members = localStorage.getItem('teamMembers') ?
