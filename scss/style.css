@@ -180,7 +180,7 @@ html, body {
   border: none;
 }
 
-.content .rightContent .rightContentHeader .search .sort {
+.content .rightContent .rightContentHeader .search #sort {
   width: 50px;
   height: 20px;
   margin: 10px;
@@ -240,21 +240,21 @@ html, body {
   width: 38px;
 }
 
-.content .rightContent #card .rightContentCards .cardContent {
+.content .rightContent #card .rightContentCards #cardContent {
   padding: 10px;
   font-family: Segoe UI;
 }
 
-.content .rightContent #card .rightContentCards .cardContent #memberName {
+.content .rightContent #card .rightContentCards #cardContent #memberName {
   font-size: 22px;
 }
 
-.content .rightContent #card .rightContentCards .cardContent #details {
+.content .rightContent #card .rightContentCards #cardContent #details {
   font-size: 14px;
   color: #2D89E6;
 }
 
-.content .rightContent #card .rightContentCards .cardContent p {
+.content .rightContent #card .rightContentCards #cardContent p {
   color: #6A6A6A;
   font-size: 14px;
   margin: 5px;

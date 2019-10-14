@@ -1,4 +1,4 @@
-<!-- This a web page for PSEU members -->
+<!-- This a simple application for PSEU Team Members. -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,6 +11,36 @@
     </head>
     <body>
         <div id="secound-artbourd">
+            <div>
+                <p id="close-bourd">x</p>
+            </div>
+            <div class="bourd-content">
+                <b id="member-name"></b>
+                <div class="member-details">
+                    <p><b id="member-deatails"></b></p>
+                    <select class="member-major">
+                        <option id="member-major" value="major" selected disabled value=" "></option>
+                        <option value="computerScience" >Computer Science</option>
+                        <option value="computerEngineering">Computer Engineering</option>
+                        <option value="informationTechnology">Information Technology</option>
+                        <option value="informationSystem">Information System</option>
+                    </select>
+                    <p>/</p>
+                    <select class="member-role">
+                        <option id="member-role" value="role" selected disabled value=" "></option>
+                        <option value="frontEndDeveloper">Front-End Developer</option>
+                        <option value="backEndDeveloper">Back-End Developer</option>
+                        <option value="fullStackDeveloper">Full-Stack Developer</option>
+                        <option value="designer">UI/UX Designer</option>
+                    </select>
+                </div>
+                <p id="member-biography"></p>
+            </div>
+            <div class="bourd-buttons">
+                <button id="delete-bourd-button">DELETE</button>
+                <button id="save-bourd-button">SAVE</button>
+                <button id="cancel-bourd-button">CANCEL</button>
+            </div>
         </div>
         <div class="root">
             <div class="header">
@@ -92,7 +122,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <script src="javaScript/style.js"></script>
 </body>
 </html>

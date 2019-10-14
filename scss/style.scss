@@ -184,8 +184,6 @@ html, body {
         }
         #card {
             overflow: scroll;
-        //    height: 130px;
-        //    height: 400px;;
 
             .rightContentCards {
                 @include flexDisplay(flex, row);
@@ -198,7 +196,7 @@ html, body {
                     width: 38px;
                 }
                 
-                .cardContent {
+                #cardContent {
                     padding: 10px;
                     font-family: $fontSego;
     
