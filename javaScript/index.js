@@ -65,7 +65,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
     deleteButton.addEventListener("click", function() {
         let email = document.getElementById("member-deatails").innerHTML;
         let member = members.find(member => member.email === email);
-        members.shift(member);
+        let memberIndex = members.indexOf(member);
+        members.splice(memberIndex, 1);
         localStorage.setItem('teamMembers', JSON.stringify(members));
         displayItems();
         displayNoOfItems();
@@ -74,8 +75,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
     saveButton.addEventListener("click", function() {
         let name = document.getElementById("member-name").innerHTML;
         let email = document.getElementById("member-deatails").innerHTML;
-        let major = document.getElementById("member-major").innerHTML;
-        let role = document.getElementById("member-role").innerHTML;
+        let major = document.getElementById("card-major").value;
+        let role = document.getElementById("card-role");
+        let majorSelected = major.options[major.selectedIndex].value;
         let biography = document.getElementById("member-biography").innerHTML;
         let member = members.find(member => member.email === email);
         member.name = name;
@@ -171,7 +173,8 @@ function displayItem(name, email, major, role, biography) {
 //this function delete the memeber, if the user click on delete icon.
 function deleteItem(email) {
     let member = members.find(member => member.email === email);
-    members.shift(member);
+    let memberIndex = members.indexOf(member);
+    members.splice(memberIndex, 1);
     localStorage.setItem('teamMembers', JSON.stringify(members));
     displayItems();
     displayNoOfItems();
