@@ -329,6 +329,7 @@ body {
 
 #second-artboard .artboard-content .member-details #member-deatails,
 #second-artboard .artboard-content .member-details p {
+  font-weight: bold;
   font-size: 13px;
   color: #2d89e6;
   font-family: Segoe UI;

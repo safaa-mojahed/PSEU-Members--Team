@@ -28,7 +28,7 @@
             <b id="member-name" contenteditable="true"></b>
             <!-- this class contain the email, major and role for the member -->
             <div class="member-details">
-                <p><b id="member-deatails" contenteditable="true"></b></p>
+                <p id="member-deatails" contenteditable="true"></p>
                 <select class="member-major" id="card-member" >
                     <option id="member-major" value="major" selected disabled value=" "></option>
                     <option value="computer-science">Computer Science</option>
@@ -118,14 +118,14 @@
                             <option value="oldest">Oldest</option>
                         </select>
                         <div class="filter">
-                            <select class="major">
+                            <select id="filter-major" class="major">
                                 <option value="major" selected disabled value=" ">Major</option>
                                 <option value="computer-science">Computer Science</option>
                                 <option value="computer-engineering">Computer Engineering</option>
                                 <option value="information-technology">Information Technology</option>
                                 <option value="information-system">Information System</option>
                             </select>
-                            <select class="role">
+                            <select id="filter-role" class="role">
                                 <option value="role" selected disabled value=" ">Role</option>
                                 <option value="front-end-developer">Front-End Developer</option>
                                 <option value="back-end-developer">Back-End Developer</option>

@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function(e) {
     let cancelButton = document.getElementById('cancel-board-button');
     let deleteButton = document.getElementById("delete-board-button");
     let close = document.getElementById('close-artboard');
+    let searchByName = document.getElementById("search");
+    let filterByRole = document.getElementById("filter-role");
+    let filterByMajor = document.getElementById("filter-major");
+    let filterBySort = document.getElementById("sort");
 
     /* if statement to check if we have a local storage or not, so if it's exists,
       we will equal members array to it after parse it to objects, if not then members will be empty. */
@@ -11,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
         JSON.parse(localStorage.getItem('teamMembers')) : []
 
     //this function display all the members stored in the array in the right content of the page.
-    displayItems();
+    displayItems(members);
     displayNoOfItems();
 
     //add eventListener on save button.
@@ -37,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
             //and and then add it to localstorage.
             members.push(member);
             localStorage.setItem('teamMembers', JSON.stringify(members));
-            displayItems();
+            displayItems(members);
             displayNoOfItems();
         } else
         if (valid && unique && index == "") {
@@ -45,14 +49,14 @@ document.addEventListener("DOMContentLoaded", function(e) {
             //by using unshift function.
             members.unshift(member);
             localStorage.setItem('teamMembers', JSON.stringify(members));
-            displayItems();
+            displayItems(members);
             displayNoOfItems();
         } else
         if (valid && unique && !addBottom) {
             //if user choose index field, then the object will be added to local storage at the specified index.
             members.splice(index, 0, member);
             localStorage.setItem('teamMembers', JSON.stringify(members));
-            displayItems();
+            displayItems(members);
             displayNoOfItems();
         }
     });
@@ -68,37 +72,18 @@ document.addEventListener("DOMContentLoaded", function(e) {
         let memberIndex = members.indexOf(member);
         members.splice(memberIndex, 1);
         localStorage.setItem('teamMembers', JSON.stringify(members));
-        displayItems();
+        displayItems(members);
         displayNoOfItems();
     });
     
-    saveButton.addEventListener("click", function() {
-        let name = document.getElementById("member-name").innerHTML;
-        let email = document.getElementById("member-deatails").innerHTML;
-        let major = document.getElementById("card-major").value;
-        let role = document.getElementById("card-role");
-        let majorSelected = major.options[major.selectedIndex].value;
-        let biography = document.getElementById("member-biography").innerHTML;
-        let member = members.find(member => member.email === email);
-        member.name = name;
-        member.email = email;
-        member.major = major;
-        member.role = role;
-        member.biography = biography;
-        localStorage.setItem('teamMembers', JSON.stringify(members));
-        displayItems();
-        displayNoOfItems();
-    });
-
     //this function will close the second artboard if the user clidk on cancel button.
     close.addEventListener("click", function() {
         document.getElementById("second-artboard").style.display = "none";
     })
-
-    
 });
 
-function displayItems() {
+
+function displayItems(members) {
     document.getElementById("card").innerHTML = "";
     members.forEach(element => {
         document.getElementById("card").innerHTML += displayCard(element.name, element.email, element.major, element.role, element.biography);
@@ -176,7 +161,7 @@ function deleteItem(email) {
     let memberIndex = members.indexOf(member);
     members.splice(memberIndex, 1);
     localStorage.setItem('teamMembers', JSON.stringify(members));
-    displayItems();
+    displayItems(members);
     displayNoOfItems();
 }
 
