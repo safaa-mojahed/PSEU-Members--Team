@@ -139,8 +139,8 @@ return member.email == email;
 //add eventListener to every item in the page.
 function displayPop(email) {
     let member = members.find(member => member.email === email);
-    let displayMember = displayItem(name, email, major, role, biography);
-     document.getElementById("second-artboard").style.display = "inline";
+    displayItem(member.name, member.email, member.major, member.role, member.biography);
+    document.getElementById("second-artboard").style.display = "inline";
 };
 
 //this function will the display the the whole card of the uder, when the user click on that item.
