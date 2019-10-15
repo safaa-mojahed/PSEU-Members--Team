@@ -75,7 +75,26 @@ document.addEventListener("DOMContentLoaded", function(e) {
         displayItems(members);
         displayNoOfItems();
     });
-    
+
+    saveButton.addEventListener("click", function () {
+        let name = document.getElementById("member-name").innerHTML;
+        let major = document.getElementById("card-major");
+        let majorSelected = major.options[major.selectedIndex].text;
+        let role = document.getElementById("card-role");
+        let roleSelected = role.options[role.selectedIndex].text;
+        let email = document.getElementById("member-deatails").innerHTML;
+        let biography = document.getElementById("member-biography").innerHTML;
+        let member = members.find(member => member.email === email);
+        member.name = name; 
+        member.email = email;
+        member.major = majorSelected;
+        member.role = roleSelected;
+        member.biography = biography;
+        localStorage.setItem('teamMembers', JSON.stringify(members));
+        displayItems(members);
+        displayNoOfItems();
+    });
+
     //this function will close the second artboard if the user clidk on cancel button.
     close.addEventListener("click", function() {
         document.getElementById("second-artboard").style.display = "none";
@@ -123,8 +142,6 @@ function emailIsUnique(enteredEmail) {
     return true;
 }
 
-
-
 //this function will display all the members  in the right content of the page.
 function displayCard(name, email, major, role, biography) {
     return ` <div class="right-content-cards" id="${email}">
@@ -168,7 +185,7 @@ function deleteItem(email) {
 //display the second artboard for every member.
 function displayPop(email) {
     let member = members.find(member => member.email === email);
+    var buffer = member;
     displayItem(member.name, member.email, member.major, member.role, member.biography);
     document.getElementById("second-artboard").style.display = "inline";
 };
-
