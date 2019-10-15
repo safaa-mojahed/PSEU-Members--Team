@@ -97,6 +97,7 @@ body {
 
 .content .left-content #biography {
   resize: none;
+  padding: 0px;
 }
 
 .content .left-content .inputs {

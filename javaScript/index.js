@@ -1,36 +1,20 @@
-// set variablies to get elements from index.html file using id.
-let save = document.getElementById('save');
-let cancel = document.getElementById('cancel-board-button');
-let deleteItem = document.getElementById('delete-bourd-button');
-let close = document.getElementById('close-artboard');
-/* if statement to check if we have a local storage or not, so if it's exists,
-  we will equal members array to it after parse it to objects, if not then members will be empty. */
-members = localStorage.getItem('teamMembers') ?
-    JSON.parse(localStorage.getItem('teamMembers')) : []
-
-//this function display all the members stored in the array in the right content of the page.
-function displayItems() {
-    document.getElementById("card").innerHTML = "";
-    members.forEach(element => {
-        document.getElementById("card").innerHTML += displayCard(element.name,
-            element.email, element.major, element.role, element.biography);
-    });
-}
-
-displayItems();
-displayNoOfItems();
-
-//this function for create new object.
-function createMember(name, email, major, role, biography) {
-    this.name = name;
-    this.email = email;
-    this.major = major;
-    this.role = role;
-    this.biography = biography;
-    //include the date and time in local storage.
-    this.date = Date();
-}
-
+document.addEventListener("DOMContentLoaded",function(e)
+{
+    let save = document.getElementById('save');
+    let cancel = document.getElementById('cancel-board-button');
+    let deleteItem = document.getElementById('delete-bourd-button');
+    let close = document.getElementById('close-artboard');
+    /* if statement to check if we have a local storage or not, so if it's exists,
+      we will equal members array to it after parse it to objects, if not then members will be empty. */
+    members = localStorage.getItem('teamMembers') ?
+        JSON.parse(localStorage.getItem('teamMembers')) : []
+    
+    //this function display all the members stored in the array in the right content of the page.
+   
+    displayItems();
+    displayNoOfItems();
+    
+    
 //add eventListener on save button.
 save.addEventListener("click", function(e) {
     //after the user enter the values for all fields, they will be saved in variablies.
@@ -74,6 +58,34 @@ save.addEventListener("click", function(e) {
     }
     console.log(members);
 });
+//this function will close the second artboard if the user click on x icon.
+cancel.addEventListener("click", function() {
+    document.getElementById("second-artboard").style.display = "none";
+})
+
+//this function will close the second artboard if the user clidk on cancel button.
+close.addEventListener("click", function() {
+    document.getElementById("second-artboard").style.display = "none";
+})
+});
+function displayItems() {
+    document.getElementById("card").innerHTML = "";
+    members.forEach(element => {
+        document.getElementById("card").innerHTML += displayCard(element.name, element.email, element.major, element.role, element.biography);            
+    });
+}
+
+// set variablies to get elements from index.html file using id.
+//this function for create new object.
+function createMember(name, email, major, role, biography) {
+    this.name = name;
+    this.email = email;
+    this.major = major;
+    this.role = role;
+    this.biography = biography;
+    //include the date and time in local storage.
+    this.date = Date();
+}
 
 //this function check the validation, if all fields are not empty,
 // if one is empty then an alart message will appear.
@@ -100,7 +112,8 @@ function emailIsUnique(enteredEmail) {
 
 //this function will display all the members  in the right content of the page.
 function displayCard(name, email, major, role, biography) {
-    return ` <div class="right-content-cards" id="${email}" onclick = "displayPop(${email})">
+    console.log(email);
+    return ` <div class="right-content-cards" id="${email}" onclick="displayPop('${email}')">
         <div class="delete-icon">
             <img src="images/delete-icon.png" alt="delete">
         </div>
@@ -109,7 +122,7 @@ function displayCard(name, email, major, role, biography) {
             <p><b id="details">${email} / ${major} / ${role} </b></p>
             <p> ${biography} </p>
         </div>
-        </div>`
+        </div>`;
 }
 
 //this functioin display the number of member appeared in the page
@@ -125,9 +138,9 @@ return member.email == email;
 
 //add eventListener to every item in the page.
 function displayPop(email) {
-    let member = members.find(findMember(email));
-    // let displayMember = displayItem(name, email, major, role, biography);
-    // document.getElementById("second-artboard").style.display = "inline";
+    let member = members.find(member => member.email === email);
+    let displayMember = displayItem(name, email, major, role, biography);
+     document.getElementById("second-artboard").style.display = "inline";
 };
 
 //this function will the display the the whole card of the uder, when the user click on that item.
@@ -139,12 +152,3 @@ function displayItem(name, email, major, role, biography) {
     document.getElementById("member-biography").innerHTML = biography;
 }
 
-//this function will close the second artboard if the user click on x icon.
-cancel.addEventListener("click", function() {
-    document.getElementById("second-artboard").style.display = "none";
-})
-
-//this function will close the second artboard if the user clidk on cancel button.
-close.addEventListener("click", function() {
-    document.getElementById("second-artboard").style.display = "none";
-})
