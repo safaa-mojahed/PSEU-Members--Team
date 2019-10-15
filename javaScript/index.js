@@ -113,11 +113,11 @@ function emailIsUnique(enteredEmail) {
 //this function will display all the members  in the right content of the page.
 function displayCard(name, email, major, role, biography) {
     console.log(email);
-    return ` <div class="right-content-cards" id="${email}" onclick="displayPop('${email}')">
+    return ` <div class="right-content-cards" id="${email}">
         <div class="delete-icon">
-            <img src="images/delete-icon.png" alt="delete">
+            <img src="images/delete-icon.png" alt="delete" onclick="deleteItem('${email}')">
         </div>
-        <div id="card-content">
+        <div id="card-content" onclick="displayPop('${email}')">
             <b id="member-name">${name}</b>
             <p><b id="details">${email} / ${major} / ${role} </b></p>
             <p> ${biography} </p>
@@ -132,13 +132,20 @@ function displayNoOfItems() {
     document.getElementById("no-of-items").innerHTML = noOfItems;
 }
 
-function findMember(email) {
-return member.email == email;
+//this function delete the memeber, if the user click on delete icon.
+function deleteItem(email) {
+    console.log("dasf");
+    let member = members.find(member => member.email === email);
+    members.shift(member);
+    localStorage.setItem('teamMembers', JSON.stringify(members));
+    displayItems();
+    displayNoOfItems();
 }
 
-//add eventListener to every item in the page.
+//display the second artboard for every member.
 function displayPop(email) {
     let member = members.find(member => member.email === email);
+    console.log(member);
     displayItem(member.name, member.email, member.major, member.role, member.biography);
     document.getElementById("second-artboard").style.display = "inline";
 };
