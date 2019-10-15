@@ -24,7 +24,7 @@ save.addEventListener("click", function(e) {
     let memberRole = document.getElementById("role").value;
     let memberBiography = document.getElementById("biography").value;
     //take the resualt of the checkbox and index input.
-    let addBottom = document.getElementById("add-bottom").checked;
+     let addBottom = document.getElementById("add-botton").checked;
     let index = document.getElementById("index").value;
     //after save the values in variablies, these values will be used to create new object.
     let member = new createMember(memeberName, memberEmail, memberMajor, memberRole, memberBiography);
@@ -56,7 +56,6 @@ save.addEventListener("click", function(e) {
         displayItems();
         displayNoOfItems();
     }
-    console.log(members);
 });
 //this function will close the second artboard if the user click on x icon.
 cancel.addEventListener("click", function() {
@@ -132,6 +131,15 @@ function displayNoOfItems() {
     document.getElementById("no-of-items").innerHTML = noOfItems;
 }
 
+//this function will the display the the whole card of the user, when the user click on that item.
+function displayItem(name, email, major, role, biography) {
+    document.getElementById("member-name").innerHTML = name;
+    document.getElementById("member-deatails").innerHTML = email;
+    document.getElementById("member-major").innerHTML = major;
+    document.getElementById("member-role").innerHTML = role;
+    document.getElementById("member-biography").innerHTML = biography;
+}
+
 //this function delete the memeber, if the user click on delete icon.
 function deleteItem(email) {
     console.log("dasf");
@@ -150,12 +158,7 @@ function displayPop(email) {
     document.getElementById("second-artboard").style.display = "inline";
 };
 
-//this function will the display the the whole card of the uder, when the user click on that item.
-function displayItem(name, email, major, role, biography) {
-    document.getElementById("member-name").innerHTML = name;
-    document.getElementById("member-deatails").innerHTML = email;
-    document.getElementById("member-major").innerHTML = major;
-    document.getElementById("member-role").innerHTML = role;
-    document.getElementById("member-biography").innerHTML = biography;
-}
+// deleteItem.addEventListener("click", functioin() {
+//  console.log("hi");
+// });
 
