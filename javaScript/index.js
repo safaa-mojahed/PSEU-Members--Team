@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(e) {
     let save = document.getElementById('save');
-    let cancel = document.getElementById('cancel-board-button');
-    let delItem = document.getElementById("delete-board-button");
+    let saveButton = document.getElementById('save-board-button');
+    let cancelButton = document.getElementById('cancel-board-button');
+    let deleteButton = document.getElementById("delete-board-button");
     let close = document.getElementById('close-artboard');
 
     /* if statement to check if we have a local storage or not, so if it's exists,
@@ -57,11 +58,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
     });
 
     //this function will close the second artboard if the user click on x icon.
-    cancel.addEventListener("click", function() {
+    cancelButton.addEventListener("click", function() {
         document.getElementById("second-artboard").style.display = "none";
     });
 
-    delItem.addEventListener("click", function() {
+    deleteButton.addEventListener("click", function() {
         let email = document.getElementById("member-deatails").innerHTML;
         let member = members.find(member => member.email === email);
         members.shift(member);
@@ -70,10 +71,29 @@ document.addEventListener("DOMContentLoaded", function(e) {
         displayNoOfItems();
     });
     
+    saveButton.addEventListener("click", function() {
+        let name = document.getElementById("member-name").innerHTML;
+        let email = document.getElementById("member-deatails").innerHTML;
+        let major = document.getElementById("member-major").innerHTML;
+        let role = document.getElementById("member-role").innerHTML;
+        let biography = document.getElementById("member-biography").innerHTML;
+        let member = members.find(member => member.email === email);
+        member.name = name;
+        member.email = email;
+        member.major = major;
+        member.role = role;
+        member.biography = biography;
+        localStorage.setItem('teamMembers', JSON.stringify(members));
+        displayItems();
+        displayNoOfItems();
+    });
+
     //this function will close the second artboard if the user clidk on cancel button.
     close.addEventListener("click", function() {
         document.getElementById("second-artboard").style.display = "none";
     })
+
+    
 });
 
 function displayItems() {
