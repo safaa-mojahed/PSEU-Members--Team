@@ -1,6 +1,5 @@
 // set variablies to get elements from index.html file using id.
 let save = document.getElementById('save');
-let item = document.getElementById('card');
 let cancel = document.getElementById('cancel-board-button');
 let deleteItem = document.getElementById('delete-bourd-button');
 let close = document.getElementById('close-artboard');
@@ -97,9 +96,11 @@ function emailIsUnique(enteredEmail) {
     return true;
 }
 
+
+
 //this function will display all the members  in the right content of the page.
 function displayCard(name, email, major, role, biography) {
-    return ` <div class="right-content-cards">
+    return ` <div class="right-content-cards" id="${email}" onclick = "displayPop(${email})">
         <div class="delete-icon">
             <img src="images/delete-icon.png" alt="delete">
         </div>
@@ -118,16 +119,16 @@ function displayNoOfItems() {
     document.getElementById("no-of-items").innerHTML = noOfItems;
 }
 
+function findMember(email) {
+return member.email == email;
+}
+
 //add eventListener to every item in the page.
-item.addEventListener("click", function() {
-    let name = this.name;
-    let email = this.email;
-    let major = this.major;
-    let role = this.role;
-    let biography = this.biography;
-    let displayMember = displayItem(name, email, major, role, biography);
-    document.getElementById("second-artboard").style.display = "inline";
-});
+function displayPop(email) {
+    let member = members.find(findMember(email));
+    // let displayMember = displayItem(name, email, major, role, biography);
+    // document.getElementById("second-artboard").style.display = "inline";
+};
 
 //this function will the display the the whole card of the uder, when the user click on that item.
 function displayItem(name, email, major, role, biography) {
